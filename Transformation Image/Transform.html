@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio controls>
+    <source src="decadence.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio> 
+
+
+<img id="swordGirl" width="0" height="0" src="swordGirl.png"> </img>
+<img id="adira" width="0" height="0" src="adira.png"> </img>
+<img id="ashlee" width="0" height="0" src="ashlee.png"> </img>
+
+
+<p>Sword Wielding Girl:</p>
+<canvas id="swordCanvas" width="450" height="750" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<p>Adira Suzuki:</p>
+<canvas id="adiraCanvas" width="500" height="750" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<p>Ashlee Angelz:</p>
+<canvas id="ashleeCanvas" width="500" height="750" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+window.onload = function() {
+  var canvasSword = document.getElementById("swordCanvas");
+  var contextSword = canvasSword.getContext("2d");
+  var imgSword = document.getElementById("swordGirl");
+  contextSword.scale(0.5, 0.5);
+  contextSword.drawImage(imgSword, 10, 10);
+
+  var canvasAdira = document.getElementById("adiraCanvas");
+  var contextAdira = canvasAdira.getContext("2d");
+  var imgAdira = document.getElementById("adira");
+  contextAdira.translate(0, 1);
+  contextAdira.scale(0.8, 0.8);
+  contextAdira.drawImage(imgAdira, -35, 0);
+
+  var canvasAshlee = document.getElementById("ashleeCanvas");
+  var contextAshlee = canvasAshlee.getContext("2d");
+  var imgAshlee = document.getElementById("ashlee");
+  contextAshlee.rotate(Math.PI/6);
+  contextAshlee.translate(140, -60);
+  contextAshlee.scale(0.7, 0.7);
+  contextAshlee.drawImage(imgAshlee, 10, 10);
+}
+</script>
+
+</body>
+</html>
